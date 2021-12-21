@@ -1,0 +1,66 @@
+
+
+<!-- Banner -->
+<div class="banner">
+    <div class="button">
+        <a routerLink="/products">View Collection</a>
+    </div>
+
+</div>
+
+
+
+
+
+<!-- step  -->
+<div class="container mt-5 mb-5">
+    <h1 class="text-center">How to get Your Desire Product</h1>
+    <div class="row mt-5">
+        <!-- one  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>1</h1>
+                <p>Select Product</p>
+            </div>
+        </div>
+        <!-- two -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>2</h1>
+                <p>Fill the details</p>
+            </div>
+        </div>
+        <!-- three  -->
+        <div class="col-lg-4 mt-2">
+            <div class="stepBox">
+                <h1>3</h1>
+                <p>Your order delivered in minute</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- Product box -->
+<div class="container mt-5 md-4">
+    <h1 class="text-center">New Arrival !</h1>
+    <div class="row">
+        <div class="col-lg-3 mt-3" *ngFor="let p of product; index as i">
+            <div class="productBox" *ngIf="i<=3">
+                <img src="{{p.img}}" alt="">
+                <h1>{{p.productName}}</h1>
+                <p>{{p.productPrice}}</p>
+                
+                <a>Buy Now</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="more mt-5">
+    <a routerLink="/products">View More</a>
+</div>

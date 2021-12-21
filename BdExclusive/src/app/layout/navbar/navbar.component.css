@@ -1,0 +1,8 @@
+.navbar-dark .navbar-nav .nav-link.active-link {
+    color: rgb(13, 253, 13);
+    font-weight: bold;
+}
+
+.navbar-custom {
+    background-color: rgb(15, 143, 21);
+}
