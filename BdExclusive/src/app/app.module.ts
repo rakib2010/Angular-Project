@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
+import { OrderPageComponent } from './pages/order-page/order-page.component';
 
 
 
@@ -29,6 +30,7 @@ import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
     RegisterComponent,
     DashboardComponent,
     AdminLoginComponent,
+    OrderPageComponent,
    
     
   ],
