@@ -1,28 +1,38 @@
-<div class="container mt-5 mb-5">
+<div class="pageTitle mt-3">
+    <h1>Order Page</h1>
+</div>
+
+
+<div class="container mt-3 mb-5">
 
     <div class="row">
 
-        <div class="col-lg-6" *ngIf="menuData">
-            <a routerLink="../../products" class="btn btn-sm btn-dark mb-3 ">Back</a>
-            <img src="{{menuData[0].imageUri}}" width="100%"/>
-            <h1 class="mt-3">{{menuData[0].productName}}</h1>
-            <p>{{menuData[0].price}}</p>
-            <p>{{menuData[0].quantity}}</p>
-        </div>
-
-        <div class="col-lg-6 col-12">
+        <div class="col-lg-6">
+            <a routerLink="../../products" class="btn btn-sm btn-warning mb-3 ">Back</a>
             <h1>Enter Your Details Here</h1>
             <form>
 
                 <input type="text" class="form-control" placeholder="Enter Your Full Name" />
                 <input type="text" class="form-control" placeholder="Enter Your Mobile" />
+                <input type="number" class="form-control" placeholder="Quantity" />
                 <textarea class="form-control" placeholder="Enter Your Address"></textarea>
                 <button class="btn btn-md btn-success mt-3 ">Place Order</button>
 
             </form>
 
 
-        </div> 
+        </div>
+
+
+        <div class="col-lg-6">
+
+            <img src="{{singleProduct.imageUri}}" width="100%" />
+            <h1 class="mt-3">{{singleProduct.productName}}</h1>
+            <h5>{{"BDT "+singleProduct.price+" TK"}}</h5>
+            <h4>{{"Available : "+singleProduct.quantity}}</h4>
+        </div>
+
+
 
 
     </div>
