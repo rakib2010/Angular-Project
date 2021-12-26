@@ -28,3 +28,37 @@
     font-size: 20px;
     color: white;
 }
+
+.main{
+    display: flex;
+}
+
+.sidbar{
+    min-width: 25%;
+    padding-left: 60px;
+    padding-top: 60px;
+
+
+
+}
+
+.productPage{
+    min-width: 75%;
+    padding-right: 60px;
+}
+
+.sidbar ul li{
+    list-style: none;
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+    
+
+
+}
+
+span{
+    font-size: 25px;
+    font-weight: bold;
+}
