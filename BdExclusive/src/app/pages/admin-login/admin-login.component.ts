@@ -11,8 +11,6 @@ import { Login } from './model';
 export class AdminLoginComponent implements OnInit {
   msg: boolean = false;
   
-
-
   submitted = false;
   form: FormGroup;
   lg: Login = new Login();

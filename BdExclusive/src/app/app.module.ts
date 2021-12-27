@@ -15,7 +15,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
-import { AdminComponent } from './backend/admin/admin.component';
+import { CategoryComponent } from './backend/category/category.component';
+
 
 
 
@@ -32,7 +33,8 @@ import { AdminComponent } from './backend/admin/admin.component';
     DashboardComponent,
     AdminLoginComponent,
     OrderPageComponent,
-    AdminComponent,
+    CategoryComponent,
+    
    
     
   ],

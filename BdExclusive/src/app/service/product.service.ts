@@ -32,6 +32,17 @@ export class ProductService {
 
   }
 
+  getAllCategory() {
+    let header = {
+      "Content-Type": "application/json"
+    };
+    return this.http.get('http://localhost:8080/getAllCategory', { headers: header });
+
+  }
+
+
+
+
   getOne(id:any) {
     let header = {
       "Content-Type": "application/json"
