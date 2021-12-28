@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/service/product.service';
 import { Product } from './model';
@@ -14,13 +15,23 @@ export class DashboardComponent implements OnInit {
   submitted = false;
   msg: boolean = false;
   products: any = [];
+  categoryItem : any;
+
   
-  constructor(private ps: ProductService) {
+  constructor(private ps: ProductService, private http: HttpClient, private cate : ProductService) {
 
   }
 
   ngOnInit(): void {
     this.getAll();
+
+    this.cate.getAllCategory().subscribe(res => {
+      console.log(res);
+      this.categoryItem = res;
+    }, err => {
+      console.log(err);
+
+    })
   }
 
 
@@ -32,7 +43,8 @@ export class DashboardComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.ps.saveProduct(this.p, this.file)
+    if(this.p.productName !== '' && this.p.price !=='' && this.p.quantity !=='' && this.p.remarks !== '' ){
+      if (this.ps.saveProduct(this.p, this.file)
       .subscribe(res => {
 
         console.log(res);
@@ -43,8 +55,9 @@ export class DashboardComponent implements OnInit {
       })) {
       this.submitted = true;
       this.msg = true;
+    }
 
-    } else {
+    
 
     }
   }

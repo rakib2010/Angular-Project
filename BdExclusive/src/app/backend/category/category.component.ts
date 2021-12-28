@@ -14,9 +14,7 @@ export class CategoryComponent implements OnInit {
   ct: Category = new Category()
   msg: boolean = false;
   categoryItem : any;
-  isSaved : boolean = false;
-  
-
+  isSaved : boolean = true;
   submitted = false;
   constructor(private router: Router, private http: HttpClient, private cate: ProductService) { }
 
@@ -82,7 +80,8 @@ export class CategoryComponent implements OnInit {
 
   deleteRow(id: any) {
     console.log(id);
-    this.http.delete("http://localhost:8080/deleteCategory/" + id,)
+    const header = { 'content-Type': 'application/json' }
+    this.http.get("http://localhost:8080/deleteCategory/" + id,{ headers: header })
       .subscribe(data => {
         console.log(data)
         
