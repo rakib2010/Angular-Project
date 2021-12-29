@@ -28,7 +28,7 @@ export class AdminLoginComponent implements OnInit {
   login() {
     this.submitted = true;
     if (this.lg.username.match("rakib") && this.lg.password.match("123")) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/adminPanel']);
      
 
 

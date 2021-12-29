@@ -71,10 +71,7 @@ export class DashboardComponent implements OnInit {
     }
   }
   
-  updateCategory(){
-    console.log(this.p);
-    
-  }
+  
 
   getAll() {
     this.ps.getAll()
