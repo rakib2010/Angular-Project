@@ -28,6 +28,9 @@ export class DashboardComponent implements OnInit {
     this.cate.getAllCategory().subscribe(res => {
       console.log(res);
       this.categoryItem = res;
+     
+      
+
     }, err => {
       console.log(err);
 
@@ -43,7 +46,13 @@ export class DashboardComponent implements OnInit {
   }
 
   onSubmit() {
+ console.log(this.p);
+
     if(this.p.productName !== '' && this.p.price !=='' && this.p.quantity !=='' && this.p.remarks !== '' ){
+    
+   
+    
+    
       if (this.ps.saveProduct(this.p, this.file)
       .subscribe(res => {
 
@@ -61,8 +70,11 @@ export class DashboardComponent implements OnInit {
 
     }
   }
-
-
+  
+  updateCategory(){
+    console.log(this.p);
+    
+  }
 
   getAll() {
     this.ps.getAll()

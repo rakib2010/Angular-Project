@@ -15,12 +15,17 @@ export class ProductService {
   saveProduct(data: any, file: any) {
     const formData: FormData = new FormData();
     formData.append('productName', data.productName);
+    
     formData.append('quantity', data.quantity);
     formData.append('price', data.price);
     formData.append('remarks', data.remarks);
     formData.append('file', file);
+    formData.append('categoryId', data.categoryId);
 
     return this.http.post('http://localhost:8080/product/save2', formData);
+
+    
+    
 
   }
 

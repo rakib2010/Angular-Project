@@ -217,9 +217,9 @@
 
                             <div class="form-group">
                                 <label for="category">Select Category</label>
-                                <select name="" id="" class="form-control">
+                                <select name="category" id="category" class="form-control" (change)="updateCategory()" [(ngModel)]="p.categoryId">
                                     <option value="-1">-- Select Category List --</option>
-                                    <option *ngFor="let ctlist of categoryItem" >{{ctlist.categoryName}}</option>
+                                    <option value="{{ctlist.id}}" *ngFor="let ctlist of categoryItem" >{{ctlist.categoryName}}</option>
                                 </select>
                             </div>
 

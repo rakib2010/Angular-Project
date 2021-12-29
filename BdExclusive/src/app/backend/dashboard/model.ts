@@ -3,4 +3,6 @@ export class Product{
     price : string =""
     remarks : string = ""
     quantity: String = ""
+    categoryId : number =0
+
 }
