@@ -1,4 +1,699 @@
-<div class="container-fluid">
+
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!--Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,700,700i&display=swap"
+    rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/fontawesome.min.css">
+<link rel="stylesheet" href="/assets/css/all.css">
+<link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/assets/style.css">
+
+<script src="/assets/js/jquery-3.2.1.slim.min.js"></script>
+
+<title>Admin layout</title>
+<!-- fav-icon -->
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png">
+
+
+
+
+
+
+
+
+<!--nav bar start-->
+<nav class="navbar navbar-expand-md navbar-light">
+    <button class="navbar-toggler ml-auto ml-2 bg-light btn-block btn" type="button" data-toggle="collapse"
+        data-target="#myNavbar" title="Menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <div class="container-fluid">
+            <div class="row">
+                <!--side bar-->
+                <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
+                    <a href="#"
+                        class="navbar-brand text-white mx-auto text-center d-block mb-4 py-3 bottom-border">BdExclusvie</a>
+                    <div class="border-bottom pb-3">
+                        <img src="/assets/images/p.jpg" alt="" width="50" height="50" class="rounded-circle mr-3">
+                        <a href="" class="text-white font-weight-bold">Rakib Hasan</a>
+                    </div>
+                    <ul class="navbar-nav flex-column mt-3">
+                        <li class="nav-item mb-2"><a routerLink="/adminPanel"
+                                class="nav-link text-white py-2 px-3 mb-2 current"><i
+                                    class="fas fa-home fa-lg mr-3"></i>Home</a></li>
+                        <li class="nav-item mb-2"><a routerLink="/adminPanel/category"
+                                class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-table fa-lg mr-3"></i>Category Tables</a></li>
+                        <li class="nav-item mb-2"><a routerLink="/adminPanel/dashboard"
+                                class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-shopping-cart fa-lg mr-3"></i>Product Entry</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-user fa-lg mr-3"></i>Profile</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-envelope-open fa-lg mr-3"></i>Inbox</a></li>
+
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-chart-line fa-lg mr-3"></i>Analytics
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-chart-bar fa-lg mr-3"></i>Chart</a></li>
+
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-wrench fa-lg mr-3"></i>Sattings</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link text-white py-2 px-3 mb-2 sidebar-link"><i
+                                    class="fas fa-cogs fa-lg mr-3"></i>Activity</a></li>
+                    </ul>
+                </div>
+
+                <!--side bar end-->
+
+                <!--top-nav-->
+                <div class="col-xl-10 col-lg-9 col-md-8 ml-auto bg-dark py-3 fixed-top top-nav">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h4 class="text-light text-uppercase mb-0 pt-2">Product Management</h4>
+                        </div>
+                        <div class="col-md-5 mobile-margin">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control search-input" placeholder="search...">
+                                    <button type="button" class="btn btn-light search-buton"><i
+                                            class="fas fa-search text-danger"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <ul class="navbar-nav">
+                                <li class="nav-item icon-parents"><a href="" class="nav-link icon-bullet"><i
+                                            class="fas fa-comments text-muted fa-lg"></i><span>3</span></a></li>
+                                <li class="nav-item icon-parents"><a href="" class="nav-link icon-bullet"><i
+                                            class="fas fa-bell text-muted fa-lg"></i><span>2</span></a></li>
+                                <li class="nav-item ml-md-auto"><a routerLink="/admin" class="nav-link text-light"
+                                        data-toggle="modal" data-target="#signout" title="Logout"><i
+                                            class="fas fa-sign-out-alt text-warning fa-lg"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--top-nav end-->
+            </div>
+        </div>
+    </div>
+</nav>
+<!--nav bar end-->
+
+<!--model-->
+<div class="modal fade" id="signout">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Do you want to leave?</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                Press logout to leave.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success btn-sm" data-dismiss="modal">Stay here</button>
+                <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">Logout</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--model end-->
+
+
+
+<div class="container mr-2">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row pt-md-5 mt-md-3 mb-5">
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-shopping-cart text-warning fa-3x"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5>Sales</h5>
+                                        <h3>$13,5000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a href="#">
+                                    <i class="fas fa-sync mr-3"></i>
+                                    <span>Update now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-money-bill text-success fa-3x"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5>Expensses</h5>
+                                        <h3>$3,5000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a href="#">
+                                    <i class="fas fa-sync mr-3"></i>
+                                    <span>Update now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-users text-info fa-3x"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5>Total Users</h5>
+                                        <h3>13,000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a href="#">
+                                    <i class="fas fa-sync mr-3"></i>
+                                    <span>Update now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 p-2">
+                        <div class="card card-common">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <i class="fas fa-chart-line text-danger fa-3x"></i>
+                                    <div class="text-right text-secondary">
+                                        <h5>Visitors</h5>
+                                        <h3>45000</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-secondary">
+                                <a href="#">
+                                    <i class="fas fa-sync mr-3"></i>
+                                    <span>Update now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row">
+                    <div class="col-xl-6 col-12 mb-4 mb-xl-0">
+                        <h4 class="text-center">Staff salary</h4>
+                        <table class="table table-striped bg-light text-center">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Salary</th>
+                                    <th>Date</th>
+                                    <th>Contact</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>01</th>
+                                    <td>Tahmid</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Message</button></td>
+                                </tr>
+                                <tr>
+                                    <th>02</th>
+                                    <td>Nishat</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Message</button></td>
+                                </tr>
+                                <tr>
+                                    <th>03</th>
+                                    <td>Tahmid</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Message</button></td>
+                                </tr>
+                                <tr>
+                                    <th>04</th>
+                                    <td>Nishat</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><button type="button" class="btn btn-primary btn-sm">Message</button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2"><span>&laquo;</span></a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link py-2">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2"><span>&raquo;</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                    <div class="col-xl-6 col-12">
+                        <h4 class="text-center">Recent Payments</h4>
+                        <table class="table text-center bg-dark table-hover text-light">
+                            <thead>
+                                <tr class="text-muted">
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Payment</th>
+                                    <th>Date</th>
+                                    <th>status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>01</th>
+                                    <td>Tahmid</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><span class="badge badge-success p-2">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <th>02</th>
+                                    <td>Mahmud</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><span class="badge badge-success p-2">Approved</span></td>
+                                </tr>
+                                <tr>
+                                    <th>03</th>
+                                    <td>Nishat</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><span class="badge badge-danger p-2">Pandding</span></td>
+                                </tr>
+                                <tr>
+                                    <th>04</th>
+                                    <td>Tahmid</td>
+                                    <td>$200000</td>
+                                    <td>20-10-19</td>
+                                    <td><span class="badge badge-success p-2">Approved</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <nav>
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2"><span>Prev</span></a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link py-2">1</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link py-2"><span>Next</span></a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!--
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row mb-4">
+                    <div class="col-12 col-xl-6 mt-3">
+                        <div class="bg-secondary p-4 mb-4 mb-xl-0">
+                            <h4 class="mb-5 text-white text-center">Coversion rate</h4>
+                            <h6 class="mb-4 text-white">Google crome</h6>
+                            <div class="progress rounded mb-3" style="height: 15px">
+                                <div class="progress-bar progress-bar-striped" style="width: 91%"> 91% </div>
+                            </div>
+
+                            <h6 class="mb-4 text-white">Mozila firefox</h6>
+                            <div class="progress rounded mb-3" style="height: 15px">
+                                <div class="progress-bar progress-bar-striped bg-success" style="width: 85%"> 85% </div>
+                            </div>
+
+                            <h6 class="mb-4 text-white">Safari</h6>
+                            <div class="progress rounded mb-3" style="height: 15px">
+                                <div class="progress-bar progress-bar-striped bg-warning" style="width: 60%"> 60% </div>
+                            </div>
+
+                            <h6 class="mb-4 text-white">Internet Explore</h6>
+                            <div class="progress rounded mb-3" style="height: 15px">
+                                <div class="progress-bar progress-bar-striped bg-danger" style="width: 11%"> 11% </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col-12 col-xl-6">
+                            <h4 class="text-center mt-3">Task List</h4>
+                           <div class="bg-light px-4 py-3 mb-4">
+                               <div class="row align-items-center">
+                                   <div class="col-1">
+                                       <input type="checkbox" class="custom-checkbox">
+                                   </div>
+                                   <div class="col-9">
+                                       <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolore error in placeat, quidem soluta!</span>
+                                   </div>
+                                   <div class="col-1">
+                                       <a href="#" title="Edit"><i class="fas fa-edit fa-lg text-success"></i></a>
+                                   </div>
+                                   <div class="col-1">
+                                       <a href="#" title="Delete"><i class="fas fa-trash fa-lg text-danger"></i></a>
+                                   </div>
+                               </div>
+                           </div>
+                        <div class="bg-light px-4 py-3 mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <input type="checkbox" class="custom-checkbox">
+                                </div>
+                                <div class="col-9">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolore error in placeat, quidem soluta!</span>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Edit"><i class="fas fa-edit fa-lg text-success"></i></a>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Delete"><i class="fas fa-trash fa-lg text-danger"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-light px-4 py-3 mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <input type="checkbox" class="custom-checkbox">
+                                </div>
+                                <div class="col-9">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolore error in placeat, quidem soluta!</span>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Edit"><i class="fas fa-edit fa-lg text-success"></i></a>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Delete"><i class="fas fa-trash fa-lg text-danger"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-light px-4 py-3 mb-4">
+                            <div class="row align-items-center">
+                                <div class="col-1">
+                                    <input type="checkbox" class="custom-checkbox">
+                                </div>
+                                <div class="col-9">
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa dolore error in placeat, quidem soluta!</span>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Edit"><i class="fas fa-edit fa-lg text-success"></i></a>
+                                </div>
+                                <div class="col-1">
+                                    <a href="#" title="Delete"><i class="fas fa-trash fa-lg text-danger"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</section>
+
+
+
+
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <h4 class="text-center mb-4">Recent customer activities</h4>
+                        <div id="accordion">
+                            <div class="card">
+                            <div class="card-header">
+                                <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseOne">
+                                    <img src="assets/images/p.png" alt="" width="50" class="rounded mr-3">
+                                    Tahmid Nishat posted a new comment.
+                                </button>
+                            </div>
+                            <div class="collapse" id="collapseOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta doloribus eos impedit ipsa obcaecati quam. Beatae perferendis, repudiandae! Adipisci debitis delectus et illo itaque, necessitatibus perferendis repudiandae sed tenetur!
+                                </div>
+                            </div>
+                        </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseTwo">
+                                        <img src="assets/images/17.jpg" alt="" width="50" class="rounded mr-3">
+                                        Tahmid Nishat delete a post.
+                                    </button>
+                                </div>
+                                <div class="collapse show" id="collapseTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta doloribus eos impedit ipsa obcaecati quam. Beatae perferendis, repudiandae! Adipisci debitis delectus et illo itaque, necessitatibus perferendis repudiandae sed tenetur!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseThree">
+                                        <img src="assets/images/17.jpg" alt="" width="50" class="rounded mr-3">
+                                        Tahmid Nishat created a post.
+                                    </button>
+                                </div>
+                                <div class="collapse" id="collapseThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta doloribus eos impedit ipsa obcaecati quam. Beatae perferendis, repudiandae! Adipisci debitis delectus et illo itaque, necessitatibus perferendis repudiandae sed tenetur!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <button class="btn btn-block bg-secondary text-light text-left" data-toggle="collapse" data-target="#collapseFour">
+                                        <img src="assets/images/p.png" alt="" width="50" class="rounded mr-3">
+                                        Tahmid Nishat approved a new user.
+                                    </button>
+                                </div>
+                                <div class="collapse" id="collapseFour" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dicta doloribus eos impedit ipsa obcaecati quam. Beatae perferendis, repudiandae! Adipisci debitis delectus et illo itaque, necessitatibus perferendis repudiandae sed tenetur!
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                       <div class="card rounded">
+                           <div class="card-body">
+                               <h4 class="text-center mb-4">Quick Status</h4>
+
+                           <ul class="list-inline text-center">
+                                <li class="list-inline-item mr-4">
+                                    <a href="#"><i class="fas fa-pencil-alt text-success mr-2"></i><span class="text-muted">Status</span></a>
+                                </li>
+                               <li class="list-inline-item mr-4">
+                                   <a href="#"><i class="fas fa-camera text-info mr-2"></i><span class="text-muted">Photo</span></a>
+                               </li>
+                               <li class="list-inline-item mr-4">
+                                   <a href="#"><i class="fas fa-map-marked text-primary mr-2"></i><span class="text-muted">Check in</span></a>
+                               </li>
+                           </ul>
+                           <form action="#">
+                               <div class="form-group">
+                                   <div class="">
+                                       <textarea class="form-control mb-2" placeholder="What's your post..?"></textarea>
+                                       <button type="button" class="btn btn-block bg-primary text-uppercase text-light">Post</button>
+                                   </div>
+                               </div>
+                           </form>
+                               <div class="row">
+                                   <div class="col-6">
+                                       <div class="card bg-light">
+                                           <div class="card-body">
+                                               <i class="fas fa-calendar-alt fa-8x text-warning mb-2 d-block m-auto"></i>
+                                           </div>
+                                           <div class="card-footer text-center font-weight-bold text-uppercase">
+                                               Mon, Oct 20
+                                           </div>
+                                       </div>
+                                   </div>
+                                   <div class="col-6">
+                                       <div class="card bg-light">
+                                           <div class="card-body">
+                                               <i class="far fa-clock fa-8x text-danger mb-2 d-block m-auto"></i>
+                                           </div>
+                                           <div class="card-footer text-center font-weight-bold text-uppercase">
+                                               2 : 20 am
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+ -->
+
+
+
+
+
+
+
+
+
+<!-- <footer class="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
+                <div class="row mt-3 pt-3 bg-light border-top">
+                    <div class="col-lg-6 text-center">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" class="text-secondary">Contact</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-secondary">Abouts</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-secondary">Blogs</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 text-center mb-2">
+                        <i class="fas fa-copyright mr-2"></i><span class="text-secondary">Tahmid Nishat ~ 2019</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> -->
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+<script src="/assets/js/popper-1.12.9.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/all.js"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/main.js"></script>
+
+
+<!-- </html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-dark sidebar collapse">
             <div class="position-sticky pt-3">
@@ -194,10 +889,14 @@
             </div>
             <!-- Body start -->
 
-            <router-outlet></router-outlet>
 
-            <!-- Body End -->
 
-        </div>
-    </div>
+
+
+<!-- Body End -->
+
+<!-- </div>
 </div>
+</div> -->
+
+-->
