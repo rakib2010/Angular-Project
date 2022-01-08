@@ -56,6 +56,14 @@ export class ProductService {
 
   }
 
+  getProductsByCategoryId(id:any) {
+    let header = {
+      "Content-Type": "application/json"
+    };
+    return this.http.get('http://localhost:8080/product/ByCategoryId/'+id, { headers: header });
+
+  }
+
   
 
 

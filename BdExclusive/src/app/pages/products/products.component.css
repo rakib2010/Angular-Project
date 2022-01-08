@@ -62,3 +62,12 @@ span{
     font-size: 25px;
     font-weight: bold;
 }
+
+ul li a {
+    display:block;
+   }
+   
+   ul li a:hover, ul li a:focus {
+    color:rgb(20, 248, 20);
+    cursor: pointer;
+   }

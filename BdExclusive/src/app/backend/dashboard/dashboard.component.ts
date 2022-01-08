@@ -15,10 +15,10 @@ export class DashboardComponent implements OnInit {
   submitted = false;
   msg: boolean = false;
   products: any = [];
-  categoryItem : any;
+  categoryItem: any;
 
-  
-  constructor(private ps: ProductService, private http: HttpClient, private cate : ProductService) {
+
+  constructor(private ps: ProductService, private http: HttpClient, private cate: ProductService) {
 
   }
 
@@ -28,8 +28,8 @@ export class DashboardComponent implements OnInit {
     this.cate.getAllCategory().subscribe(res => {
       console.log(res);
       this.categoryItem = res;
-     
-      
+
+
 
     }, err => {
       console.log(err);
@@ -46,32 +46,32 @@ export class DashboardComponent implements OnInit {
   }
 
   onSubmit() {
- console.log(this.p);
+    console.log(this.p);
 
-    if(this.p.productName !== '' && this.p.price !=='' && this.p.quantity !=='' && this.p.remarks !== '' ){
-    
-   
-    
-    
+    if (this.p.productName !== '' && this.p.price !== '' && this.p.quantity !== '' && this.p.remarks !== '') {
+
+
+
+
       if (this.ps.saveProduct(this.p, this.file)
-      .subscribe(res => {
+        .subscribe(res => {
 
-        console.log(res);
+          console.log(res);
 
-      }, err => {
-        console.log(err);
+        }, err => {
+          console.log(err);
 
-      })) {
-      this.submitted = true;
-      this.msg = true;
-    }
+        })) {
+        this.submitted = true;
+        this.msg = true;
+      }
 
-    
+
 
     }
   }
-  
-  
+
+
 
   getAll() {
     this.ps.getAll()

@@ -2,11 +2,13 @@
     <div class="container sidbar bg-light">
         <span>Product Categories</span>
         <ul>
-            <li >Men's Fashion</li>
-            <li>Wome'n Fashion</li>
-            <li>Electronic Device</li>
-            <li>Sport's & Outdoor</li>
-            <li>Babies & Toys</li>
+            <li><a (click)="allClick()" >All</a></li>
+            <li><a (click)="mensClick(1)" >Men's Fashion</a></li>
+            <li><a (click)="womensClick(2)" >Women's Fashion</a></li>
+            <li><a (click)="deviceClick(3)" >Electronics Devices</a></li>
+            <li><a  >Sport's & Outdoor</a></li>
+            <li><a  >Babies & Toys</a></li>
+            
             
         </ul>
 
