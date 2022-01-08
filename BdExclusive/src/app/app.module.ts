@@ -17,6 +17,7 @@ import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
 import { CategoryComponent } from './backend/category/category.component';
 import { AdminComponent } from './backend/admin/admin.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -36,6 +37,7 @@ import { AdminComponent } from './backend/admin/admin.component';
     OrderPageComponent,
     CategoryComponent,
     AdminComponent,
+    CartComponent,
     
    
     

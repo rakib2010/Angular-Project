@@ -22,7 +22,7 @@
 
 .productBox a{
     text-decoration: none;
-    background-color: green;
+    background-color: rgb(10, 126, 10);
     border-radius: 5px;
     padding: 6px 15px;
     font-size: 20px;
@@ -37,6 +37,7 @@
     min-width: 25%;
     padding-left: 60px;
     padding-top: 60px;
+    background-color: rgb(239, 250, 236);
 
 
 

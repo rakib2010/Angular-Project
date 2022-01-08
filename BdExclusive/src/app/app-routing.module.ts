@@ -5,6 +5,7 @@ import { CategoryComponent } from './backend/category/category.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
+import { CartComponent } from './pages/cart/cart.component';
 import { CustomerSupportComponent } from './pages/customer-support/customer-support.component';
 import { HomeComponent } from './pages/home/home.component';
 import { OrderPageComponent } from './pages/order-page/order-page.component';
@@ -21,6 +22,7 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent },
   { path: "admin", component: AdminLoginComponent },
   { path: "products/:id", component: OrderPageComponent },
+  { path: "cart", component: CartComponent },
 
   { path: "adminPanel", component: AdminComponent,
   children : [

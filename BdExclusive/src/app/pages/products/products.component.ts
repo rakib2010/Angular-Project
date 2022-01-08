@@ -19,6 +19,7 @@ export class ProductsComponent implements OnInit {
     this.s.getAll().subscribe(res => {
       console.log(res);
       this.products = res;
+      
     }, err => {
       console.log(err);
 
@@ -27,6 +28,10 @@ export class ProductsComponent implements OnInit {
     
     
   }
+
+ 
+
+  
 
 
 allClick(){

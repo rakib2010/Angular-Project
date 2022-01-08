@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class OrderPageComponent implements OnInit {
   singleProduct: any;
+  
 
   getMenuId: any;
 
@@ -19,6 +20,7 @@ export class OrderPageComponent implements OnInit {
     this.ps.getOne(this.getMenuId).subscribe(res => {
       console.log(res);
       this.singleProduct = res;
+      
     }, err => {
       console.log(err);
 
