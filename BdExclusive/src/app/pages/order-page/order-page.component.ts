@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/service/product.service';
 import { ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'src/app/service/local-storage.service';
 
 @Component({
   selector: 'app-order-page',
@@ -8,12 +9,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./order-page.component.css']
 })
 export class OrderPageComponent implements OnInit {
+  items: any;
+  
   singleProduct: any;
   
 
   getMenuId: any;
 
-  constructor(private ps: ProductService, private param: ActivatedRoute) { }
+  constructor(private ps: ProductService, private param: ActivatedRoute, private storage: LocalStorageService) { }
 
   ngOnInit(): void {
     this.getMenuId = this.param.snapshot.paramMap.get('id');
@@ -25,6 +28,24 @@ export class OrderPageComponent implements OnInit {
       console.log(err);
 
     })
+
+  }
+
+
+  addToCard(){
+    var strItems = this.storage.getItem('fav_items');
+    if(strItems != null){
+      this.items = JSON.parse(strItems);
+    }else{
+      this.items = [];
+    }
+
+
+    
+    this.items.push(this.singleProduct);
+
+    this.storage.setItem("fav_items", JSON.stringify(this.items));
+
 
   }
 

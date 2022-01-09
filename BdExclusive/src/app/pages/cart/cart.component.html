@@ -1,6 +1,7 @@
 
-<ng-container *ngIf="true">
+
    <div class="container">
+       <h2 class="text-center">Cart Items</h2>
     <div class="card-table">
         <div class="cart-product">
             <table class="table table-responsive">
@@ -16,16 +17,16 @@
 
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Jacket</td>
-                        <td></td>
-                        <td>20</td>
-                        <td>5000 tk</td>
-                        <td>good</td>
+                <tbody >
+                    <tr *ngFor="let p of pItems">
+                        <td>{{p.id}}</td>
+                        <td>{{p.productName}}</td>
+                        <td>{{p.imageUri}}</td>
+                        <td>{{p.quantity}}</td>
+                        <td>{{p.price}}</td>
+                        <td>{{p.remarks}}</td>
                         <td>
-                            <button class="btn btn-danger">Delete</button>
+                            <button class="btn btn-danger" (click)="removeItem(p.id)">Delete</button>
                         </td>
                     </tr>
                 </tbody>
@@ -34,7 +35,6 @@
         </div>
     </div>
    </div>
-</ng-container>
 
 
 
@@ -47,7 +47,8 @@
 
 
 
-<ng-container *ngIf="false">
+
+<!-- <ng-container *ngIf="false">
     <div class="container">
         <div class="card">
             <h5 class="card-title">My Cart</h5>
@@ -59,4 +60,4 @@
             <button class="btn btn-success">Order Now</button>
         </div>
     </div>
-</ng-container>
+</ng-container> -->

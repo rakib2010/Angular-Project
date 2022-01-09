@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from 'src/app/service/local-storage.service';
 
 
 @Component({
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  
-  constructor() { }
+  pItems: any = [];
+  constructor(private storage : LocalStorageService) { }
 
   ngOnInit(): void {
+    let strItems = this.storage.getItem('fav_items');
+    if(strItems != null){
+      this.pItems = JSON.parse(strItems);
+    }
    
+   
+   
+  }
+
+
+  removeItem(id: any){
+    this.pItems.splice(id,1);
+
   }
 
 }

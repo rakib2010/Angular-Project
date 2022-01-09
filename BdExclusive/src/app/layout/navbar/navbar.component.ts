@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from 'src/app/service/product.service';
+import { LocalStorageService } from 'src/app/service/local-storage.service';
+
 
 
 
@@ -10,11 +11,17 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  productCount: any = [];
   
   
-  constructor(private s :ProductService) { }
+  constructor(private storage: LocalStorageService) { }
 
   ngOnInit(): void {
+
+    let strItems = this.storage.getItem('fav_items');
+    if(strItems != null){
+      this.productCount = JSON.parse(strItems);
+    }
    
 
     
