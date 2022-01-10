@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '../backend/dashboard/model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -65,7 +65,13 @@ export class ProductService {
 
   }
 
-  
+  getAllOrderList() {
+    let header = {
+      "Content-Type": "application/json"
+    };
+    return this.http.get('http://localhost:8080/getAllOrder', { headers: header });
+
+  }
 
 
   

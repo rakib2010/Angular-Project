@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './backend/admin/admin.component';
 import { CategoryComponent } from './backend/category/category.component';
 import { DashboardComponent } from './backend/dashboard/dashboard.component';
+import { OrderListComponent } from './backend/order-list/order-list.component';
 import { AboutComponent } from './pages/about/about.component';
 import { AdminLoginComponent } from './pages/admin-login/admin-login.component';
 import { CartComponent } from './pages/cart/cart.component';
@@ -28,6 +29,7 @@ const routes: Routes = [
   children : [
     { path: "dashboard", component: DashboardComponent },
     { path: "category", component: CategoryComponent },
+    { path: "orderList", component: OrderListComponent },
   ]
    },
 

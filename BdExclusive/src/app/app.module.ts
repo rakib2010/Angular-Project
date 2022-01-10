@@ -18,6 +18,7 @@ import { OrderPageComponent } from './pages/order-page/order-page.component';
 import { CategoryComponent } from './backend/category/category.component';
 import { AdminComponent } from './backend/admin/admin.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { OrderListComponent } from './backend/order-list/order-list.component';
 
 
 
@@ -38,6 +39,7 @@ import { CartComponent } from './pages/cart/cart.component';
     CategoryComponent,
     AdminComponent,
     CartComponent,
+    OrderListComponent,
     
    
     
