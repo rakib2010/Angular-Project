@@ -8,9 +8,15 @@
     <div class="row">
 
         <div class="col-lg-6 col-md-6 mt-4">
-            <a routerLink="../../products" class="btn btn-sm btn-warning mb-3 ">Back</a>
             
-            
+            <div class="row" *ngIf="msg">
+                <div class="col-xs-12">
+                    <p class="alert alert-success">
+                        <strong>Add to Cart Successful </strong>
+
+                    </p>
+                </div>
+            </div>
 
                 
                 <h2>{{singleProduct.productName}}</h2>
@@ -18,6 +24,8 @@
                 <h4>{{"Available : "+singleProduct.quantity}}</h4>
                 <h4>{{"Remarks : "+singleProduct.remarks}}</h4>
                 <button class="btn btn-md btn-success mt-3 " (click)="addToCard()">Add to Cart</button>
+                <button class="btn btn-md btn-warning mt-3 " (click)="returnProduct()" style="margin-left: 18px;">Back</button>
+                
 
             
 

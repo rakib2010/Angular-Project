@@ -76,12 +76,13 @@
 
 .more a{
     text-decoration: none;
-    background-color: rgb(44, 195, 24);
+    background-color: rgb(29, 105, 19);
     border-radius: 5px;
     padding: 10px 15px;
     color: #fff;
     font-size: 20px;
-    margin-left: 35px;
+    margin-left: 40px;
+    
 
 }
 
