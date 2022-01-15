@@ -16,10 +16,9 @@ export class CartComponent implements OnInit {
   cart: Cart = new Cart();
   msg: boolean = false;
   msg1: boolean = false;
-  submitted = false;
+
   pItems: any = [];
-  constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router) 
-  { }
+  constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
     let strItems = this.storage.getItem('fav_items');
@@ -30,7 +29,7 @@ export class CartComponent implements OnInit {
   }
 
   saveOrder() {
-    this.submitted = true;
+
     if (this.cart.name !== "" && this.cart.contact !== "" && this.cart.email !== "", this.cart.address !== "") {
       this.msg = true;
 
@@ -44,29 +43,32 @@ export class CartComponent implements OnInit {
         })
 
 
-    }else{
+    } else {
       this.msg1 = true;
     }
 
   }
 
 
-  removeItems(i: any){
-    
-    this.pItems.splice(i,1);
+  removeItems(i: any) {
+    this.pItems.splice(i, 1);
 
     this.storage.setItem("fav_items", JSON.stringify(this.pItems));
 
   }
 
-  clearCart(pItems: any){
+  clearCart(pItems: any) {
+
+
+
     this.pItems.splice(pItems)
     this.storage.setItem("fav_items", JSON.stringify(this.pItems));
 
+
   }
 
-  returnProduct(){
-    this.router.navigate(['../../products'])
+  shopMore() {
+    this.router.navigate(['/products'])
 
   }
 

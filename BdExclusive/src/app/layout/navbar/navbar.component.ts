@@ -11,7 +11,7 @@ import { LocalStorageService } from 'src/app/service/local-storage.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  productCount: any = [];
+  productCount: any
   
   
   constructor(private storage: LocalStorageService) { }

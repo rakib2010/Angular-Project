@@ -3,7 +3,7 @@
     <div class="card-table">
         <div class="cart-product">
             <table class="table table-responsive table-striped">
-                <thead>
+                <thead style="background-color: rgb(27, 110, 27); color: white;">
                     <tr>
                         <th>ID</th>
                         <th>Product Name</th>
@@ -24,18 +24,26 @@
                         <td>{{p.price}}</td>
                         <td>{{p.remarks}}</td>
                         <td>
-                            <button class="btn btn-danger" (click)="removeItems(i)">Delete</button>
+                            <button class="btn btn-warning" (click)="removeItems(i)">Delete</button>
                         </td>
                     </tr>
                 </tbody>
 
             </table>
+           
         </div>
+        
+        
     </div>
+    <div class="d-md-flex justify-content-end">
+        <button class="btn btn-danger mt-3 " (click)="clearCart(pItems)">Clear All
+            Carts</button>
+    </div>
+   
 
 
     <div class="container col-md-9 mt-5 mb-5">
-        <h1 class="text-center">Customer Information</h1>
+        <h2 class="text-center" style="color: aliceblue; background-color: rgb(26, 129, 26);">Customer Information</h2>
 
         <div class="row" *ngIf="msg">
             <div class="col-xs-12">
@@ -80,18 +88,19 @@
                     placeholder="Enter Your Address"></textarea>
             </div>
 
-            <div class="container">
-                <button class="btn btn-success mt-3" type="submit">Order Now</button>
-                <button class="btn btn-danger mt-3" style="margin-left: 18px;" (click)="clearCart(pItems)">Clear
-                    Carts</button>
-                <button class="btn btn-primary mt-3" style="margin-left: 18px;" (click)="returnProduct()">Back</button>
+            <div class="d-grid gap-3 col-6 mx-auto mt-4">
+                <button class="btn btn-success" type="submit">Order Now</button>
+                
+                <button class="btn btn-primary"  (click)="shopMore()">Shop More</button>
 
 
             </div>
 
 
 
+
         </form>
+        
 
     </div>
 </div>
