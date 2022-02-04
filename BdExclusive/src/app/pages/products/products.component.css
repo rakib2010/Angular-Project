@@ -40,11 +40,12 @@
     display: flex;
 }
 
-.sidbar{
+.sidebar{
     min-width: 25%;
     padding-left: 60px;
-    padding-top: 60px;
+    padding-top: 46px;
     background-color: rgb(239, 250, 236);
+    
 
 
 
@@ -55,16 +56,20 @@
     padding-right: 60px;
 }
 
-.sidbar ul li{
+.sidebar ul li{
     list-style: none;
-    padding: 10px 0px;
+    padding: 5px;
     font-size: 15px;
     font-weight: bold;
     color: #333;
     
+    
+    
 
 
 }
+
+
 
 span{
     font-size: 25px;
@@ -73,9 +78,11 @@ span{
 
 ul li a {
     display:block;
+    
    }
    
-   ul li a:hover, ul li a:focus {
-    color:rgb(20, 248, 20);
+   ul li a:hover, ul li a:active {
+    color:rgb(37, 167, 37);
     cursor: pointer;
+    font-size: 150%;
    }
