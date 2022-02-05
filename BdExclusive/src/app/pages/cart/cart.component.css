@@ -24,6 +24,11 @@
     border-radius: .25rem;
 }
 
+table tbody td img{
+  max-width: 50px;
+  max-height: 68px;
+}
+
 
 
 

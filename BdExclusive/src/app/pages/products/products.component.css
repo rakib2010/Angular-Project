@@ -54,16 +54,27 @@
 .productPage{
     min-width: 75%;
     padding-right: 60px;
+    
 }
 
 .sidebar ul li{
     list-style: none;
-    padding: 5px;
+    padding: 6px;
     font-size: 15px;
-    font-weight: bold;
-    color: #333;
+    font-weight: 700;
     
     
+}
+
+ol,ul {
+  padding-left: 0;
+}
+
+.sidebar ul li img{
+   
+   max-width: 15px;
+   height: 21px;
+   margin-right: 17px;
     
 
 
@@ -81,7 +92,7 @@ ul li a {
     
    }
    
-   ul li a:hover, ul li a:active {
+ul li a:hover, ul li a:active {
     color:rgb(37, 167, 37);
     cursor: pointer;
     font-size: 150%;

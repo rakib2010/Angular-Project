@@ -18,9 +18,7 @@ export class DashboardComponent implements OnInit {
   categoryItem: any;
 
 
-  constructor(private ps: ProductService, private http: HttpClient, private cate: ProductService) {
-
-  }
+  constructor(private ps: ProductService, private http: HttpClient, private cate: ProductService) { }
 
   ngOnInit(): void {
     this.getAll();
@@ -29,12 +27,11 @@ export class DashboardComponent implements OnInit {
       console.log(res);
       this.categoryItem = res;
 
-
-
     }, err => {
       console.log(err);
 
     })
+
   }
 
 
@@ -49,9 +46,6 @@ export class DashboardComponent implements OnInit {
     console.log(this.p);
 
     if (this.p.productName !== '' && this.p.price !== '' && this.p.quantity !== '' && this.p.remarks !== '') {
-
-
-
 
       if (this.ps.saveProduct(this.p, this.file)
         .subscribe(res => {
@@ -82,6 +76,18 @@ export class DashboardComponent implements OnInit {
         console.log(err);
 
       })
+  }
+
+
+  deleteRow(id: any) {
+    const header = { 'content-Type': 'application/json' }
+    this.http.get("http://localhost:8080/product/delete/" + id, { headers: header })
+      .subscribe(data => {
+        console.log(data)
+      })
+
+    console.log("delete===============");
+
   }
 
 }

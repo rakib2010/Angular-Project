@@ -13,7 +13,7 @@
                 </div>
 
 
-                <h1>Entry New Product</h1>
+                <h2 class="text-center">Create New Product</h2>
 
                 <div class="form-group">
                     <label for="category">Select Category</label>
@@ -61,25 +61,33 @@
 
 
 
-<div class="table-responsive mt-5">
-    <h1 class="text-center">Product Table</h1>
+<div class="table-responsive mt-5" style="margin-bottom: 40%;">
+    <h2 class="text-center">Product Table</h2>
     <table class="table table-bordered table-striped">
-        <thead>
+        <thead class="table-dark">
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
+                <th scope="col">SL#</th>
+                <th scope="col">ID</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Product Image</th>
                 <th scope="col">Price</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Remarks</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let p of products; index as i">
                 <td>{{i+1}}</td>
+                <td>{{p.id}}</td>
                 <td>{{p.productName}}</td>
+                <td> <img src="{{p.imageUri}}"></td>
                 <td>{{p.price}}</td>
                 <td>{{p.quantity}}</td>
                 <td>{{p.remarks}}</td>
+                <td>
+                    <button class="btn btn-danger" type="submit" (click)="deleteRow(p.id)" >Delete</button>
+                </td>
 
             </tr>
         </tbody>
@@ -91,7 +99,7 @@
 
 
 
-<div class="container mt-5 md-4">
+<!-- <div class="container mt-5 md-4">
     <h1 class="text-center">Products Category</h1>
     <div class="row">
         <div class="col-lg-3 mt-3" *ngFor="let p of products">
@@ -105,7 +113,7 @@
 
         </div>
     </div>
-</div>
+</div> -->
 
 
 

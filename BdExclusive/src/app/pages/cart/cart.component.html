@@ -5,7 +5,7 @@
             <table class="table table-responsive table-striped">
                 <thead style="background-color: rgb(27, 110, 27); color: white;">
                     <tr>
-                        <th>ID</th>
+                        <th>#</th>
                         <th>Product Name</th>
                         <th>Product Image</th>
                         <th>Quantity</th>
@@ -17,15 +17,24 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let p of pItems; index as i">
-                        <td>{{p.id}}</td>
+                        <td>{{i+1}}</td>
                         <td>{{p.productName}}</td>
-                        <td>{{p.imageUri}}</td>
+                        <td> <img src="{{p.imageUri}}"></td>
                         <td>{{p.quantity}}</td>
                         <td>{{p.price}}</td>
                         <td>{{p.remarks}}</td>
                         <td>
                             <button class="btn btn-warning" (click)="removeItems(i)">Delete</button>
                         </td>
+                    </tr>
+                    <tr style="background-color: rgb(175, 209, 178); font-weight: bold;">
+                        <td>Total Products =10 </td>
+                        <td></td>
+                        <td></td>
+                        <td>Total Quantity = 25</td>
+                        <td>Total Price =100000 </td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </tbody>
 
