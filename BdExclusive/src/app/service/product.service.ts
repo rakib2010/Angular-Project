@@ -73,6 +73,14 @@ export class ProductService {
 
   }
 
+  getProductsBySearch(searchText:any) {
+    let header = {
+      "Content-Type": "application/json"
+    };
+    return this.http.get('http://localhost:8080/product/search/'+searchText, { headers: header });
+
+  }
+
 
   
 }

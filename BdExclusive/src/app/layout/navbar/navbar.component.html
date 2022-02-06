@@ -29,10 +29,14 @@
                 </li>
                 
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search">
-                <button class="btn btn-outline-info btn-success" type="submit">Search</button>
-            </form>
+            <div>
+                <form (ngSubmit)="searchProduct(pro.productName)" class="d-flex">
+                    <input [(ngModel)]="pro.productName" name="name" class="form-control me-2" type="search" placeholder="Search Product" aria-label="Search"  >
+                    <button class="btn btn-outline-info btn-success" type="submit">Search</button>
+                </form>
+
+            </div>
+            
 
             
 

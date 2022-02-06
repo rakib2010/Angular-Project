@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ProductService } from 'src/app/service/product.service';
 
 
@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
+  
   products : any;
   
   
@@ -34,7 +35,7 @@ export class ProductsComponent implements OnInit {
   
 
 
-allClick(){
+allClick(){  
   this.s.getAll().subscribe(res => {
     console.log(res);
     this.products = res;
@@ -80,3 +81,4 @@ allClick(){
   }
 
 }
+
