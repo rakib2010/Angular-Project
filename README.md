@@ -1,5 +1,5 @@
 Project Name: bdExclusive (ecommerce site)<br />
-Presentation on this project: https://docs.google.com/presentation/d/1VeUOU3ZfXp0_nWo5V6JZjfXgJysDCc3p/edit?usp=sharing&ouid=111540383073297392612&rtpof=true&sd=true
+Presentation on this project: https://docs.google.com/presentation/d/1VeUOU3ZfXp0_nWo5V6JZjfXgJysDCc3p/edit?usp=sharing&ouid=111540383073297392612&rtpof=true&sd=true<br />
 Techonologies:<br />
 Front end : Angular 12<br />
 Back end  : Spring Framework<br />
