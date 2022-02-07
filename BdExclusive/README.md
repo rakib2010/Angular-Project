@@ -1,2 +1,0 @@
-==== Ecommerce Project ====
-Angular
