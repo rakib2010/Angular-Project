@@ -34,16 +34,8 @@ export class NavbarComponent implements OnInit {
 
 
   searchProduct(searchText:any){
-    this.s.getProductsBySearch(searchText).subscribe(res => {
-      console.log(res);
-      this.product = res;
-    }, err => {
-      console.log(err);
 
-    })
-    console.log("name = "+this.product);
-    
-    
+    this.s.newEvent(searchText);
 
   }
 

@@ -19,6 +19,9 @@ import { CategoryComponent } from './backend/category/category.component';
 import { AdminComponent } from './backend/admin/admin.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { OrderListComponent } from './backend/order-list/order-list.component';
+import { ProductService } from './service/product.service';
+import { LocalStorageService } from './service/local-storage.service';
+import { OrderDetailsService } from './service/order-details.service';
 
 
 
@@ -51,7 +54,11 @@ import { OrderListComponent } from './backend/order-list/order-list.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ProductService,
+    LocalStorageService,
+    OrderDetailsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

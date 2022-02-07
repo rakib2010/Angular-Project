@@ -23,7 +23,7 @@
         <div class="container mt-5 md-4 text-center">
             <h1 class="text-center">Exclusive Collection</h1>
             <div class="row">
-                <div class="col-lg-3 mt-3" *ngFor="let p of products">
+                <div class="col-lg-3 mt-3" *ngFor="let p of products ">
                     <div class="productBox">
                         <img src="{{p.imageUri}}" alt="" [routerLink]="['/products', p.id]" >
                         <h1>{{p.productName}}</h1>

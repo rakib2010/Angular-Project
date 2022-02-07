@@ -15,18 +15,28 @@ export class ProductsComponent implements OnInit {
   
   constructor(private s : ProductService) { }
 
+
   ngOnInit(): void {
-    
-    this.s.getAll().subscribe(res => {
-      console.log(res);
+
+  
+    this.s.getAll().subscribe(res=>{
       this.products = res;
-      
-    }, err => {
-      console.log(err);
-
     })
-
+  
+    this.s.events$.forEach(searchText => {
+      console.log(event)
+      this.s.getProductsBySearch(searchText).subscribe(res => {
+        console.log(res);
+        this.products = res;
+      
+      }, err => {
+        console.log(err);
+  
+      })
     
+    });
+
+
     
   }
 
