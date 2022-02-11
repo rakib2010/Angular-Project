@@ -8,7 +8,7 @@
     <div class="row">
 
         <div class="col-lg-6 col-md-6 mt-4">
-            
+
             <div class="row" *ngIf="msg">
                 <div class="col-xs-12">
                     <p class="alert alert-success">
@@ -18,17 +18,30 @@
                 </div>
             </div>
 
-                
-                <h2>{{singleProduct.productName}}</h2>
-                <h5>{{"BDT "+singleProduct.price+" TK"}}</h5>
-                <h4>{{"Available : "+singleProduct.quantity}}</h4>
-                <h4>{{"Remarks : "+singleProduct.remarks}}</h4>
-                <button class="btn btn-md btn-success mt-3 " (click)="addToCard()">Add to Cart</button>
-                <button class="btn btn-md btn-warning mt-3 " (click)="returnProduct()" style="margin-left: 18px;">Back</button>
-                
 
+            <h2>{{singleProduct.productName}}</h2>
+            <h5>{{"BDT "+singleProduct.price+" TK"}}</h5>
+            <h4>{{"Available : "+singleProduct.quantity}}</h4>
+            <h4>{{"Remarks : "+singleProduct.remarks}}</h4>
+
+            <div style="display: flex;">
+                <h4>Qunatity :</h4>
+                <div style="margin-left: 15px; display: flex;">
+                    <button class="bt" (click)="counterMinus()">-</button>
+                    <div style="font-size: 25px; margin-left: 20px; margin-right: 20px;">{{count}}</div>
+                    <button class="bt" (click)="counterPlus()">+</button>
+                </div>
+
+            </div>
+            <div style="display: flex;">
+                <h4>Total Price :</h4>
+                <h4 style="margin-left: 15px;">{{totalAmount}}.TK</h4>
+            </div>
+
+            <button class="btn btn-md btn-success mt-3 " (click)="addToCard()">Add to Cart</button>
+            <button class="btn btn-md btn-warning mt-3 " (click)="returnProduct()"
+                style="margin-left: 18px;">Back</button>
             
-
 
         </div>
 

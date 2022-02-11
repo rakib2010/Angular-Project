@@ -21,3 +21,16 @@ img
 .pageTitle{
     text-align: center;
 }
+
+.bt {
+    background-color: rgb(33, 107, 26);
+    border-radius: 10px;   
+    border: none;
+    color: white;
+    width: 44px;
+    cursor: pointer;
+  }
+  .bt:hover{
+    background-color: rgb(57, 158, 40);
+    color: white;
+  }

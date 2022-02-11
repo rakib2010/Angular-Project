@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
 import { ProductService } from 'src/app/service/product.service';
 import { Products } from './productModel';
@@ -16,11 +16,16 @@ export class NavbarComponent implements OnInit {
   pro: Products = new Products();
   productCount: any;
   product: any;
+
+   
+  
   
   
   constructor(private storage: LocalStorageService, private s: ProductService) { }
 
   ngOnInit(): void {
+    
+    
 
     let strItems = this.storage.getItem('fav_items');
     if(strItems != null){
@@ -38,5 +43,8 @@ export class NavbarComponent implements OnInit {
     this.s.newEvent(searchText);
 
   }
+
+  
+  
 
 }
