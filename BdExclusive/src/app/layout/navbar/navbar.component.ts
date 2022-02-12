@@ -14,7 +14,7 @@ import { Products } from './productModel';
 })
 export class NavbarComponent implements OnInit {
   pro: Products = new Products();
-  productCount: any;
+  productCount: any = [];
   product: any;
 
    
@@ -24,13 +24,24 @@ export class NavbarComponent implements OnInit {
   constructor(private storage: LocalStorageService, private s: ProductService) { }
 
   ngOnInit(): void {
+
+    this.s.countMessage$.subscribe(
+      res => {
+        console.log(res);
+        
+        this.productCount = res;
+
+      }
+    )
+
+
     
     
 
-    let strItems = this.storage.getItem('fav_items');
-    if(strItems != null){
-      this.productCount = JSON.parse(strItems);
-    }
+    // let strItems = this.storage.getItem('fav_items');
+    // if(strItems != null){
+    //   this.productCount = JSON.parse(strItems);
+    // }
    
 
     

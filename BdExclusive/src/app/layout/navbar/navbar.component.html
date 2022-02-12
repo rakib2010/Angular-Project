@@ -45,7 +45,7 @@
         <div style="margin-left: 10px;">
             <button class="btn btn-success" routerLink="cart">
                 <i style="font-size: 20px;" class="fas fa-cart-plus" ></i>
-                <div style="font-size:15px" class="badge bg-danger" >{{productCount.length}}</div>
+                <div style="font-size:15px" class="badge bg-danger" >{{productCount.length? productCount.length+1:productCount.length}}</div>
 
             </button>
         </div>

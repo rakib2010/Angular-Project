@@ -57,16 +57,15 @@ export class OrderPageComponent implements OnInit {
 
 
   addToCard() {
-    var strItems = this.storage.getItem('fav_items');
+   var strItems = this.storage.getItem('fav_items');
     if (strItems != null) {
       this.items = JSON.parse(strItems);
       this.productCount = JSON.parse(strItems);
-      console.log(this.productCount);
-
-
-    } else {
+     } else {
       this.items = [];
     }
+
+    this.ps.sendMessage(this.productCount);
 
 
 

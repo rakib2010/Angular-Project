@@ -20,7 +20,7 @@
 
 
             <h2>{{singleProduct.productName}}</h2>
-            <h5>{{"BDT "+singleProduct.price+" TK"}}</h5>
+            <h4 style="color: coral;">{{"BDT "+singleProduct.price+" TK"}}</h4>
             <h4>{{"Available : "+singleProduct.quantity}}</h4>
             <h4>{{"Remarks : "+singleProduct.remarks}}</h4>
 
@@ -35,7 +35,7 @@
             </div>
             <div style="display: flex;">
                 <h4>Total Price :</h4>
-                <h4 style="margin-left: 15px;">{{totalAmount}}.TK</h4>
+                <h4 style="margin-left: 15px; color: rgb(212, 100, 35); font-family: monospace;">BDT {{totalAmount}}&nbsp;.TK</h4>
             </div>
 
             <button class="btn btn-md btn-success mt-3 " (click)="addToCard()">Add to Cart</button>
