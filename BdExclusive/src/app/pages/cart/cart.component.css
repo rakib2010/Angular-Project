@@ -170,3 +170,10 @@ body{margin-top:20px;
     .text-danger {
         color: #ed5565;
     }
+
+
+    .checkout{
+      display: flex;
+      justify-content: space-between;
+      
+    }
