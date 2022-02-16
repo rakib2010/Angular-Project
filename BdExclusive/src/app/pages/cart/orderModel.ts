@@ -4,5 +4,7 @@ export class Cart{
     contact : String = "";
     email : String = "";
     address : String = "";
+    totalAmount: number = 0;
+
 
 }

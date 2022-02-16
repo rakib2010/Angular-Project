@@ -54,6 +54,8 @@ export class CartComponent implements OnInit {
 
 
   saveOrder() {
+    console.log("total Price = "+this.cart.totalAmount);
+    
 
     if (this.cart.name !== "" && this.cart.contact !== "" && this.cart.email !== "", this.cart.address !== "") {
       this.msg = true;
