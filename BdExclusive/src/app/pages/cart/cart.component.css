@@ -177,3 +177,9 @@ body{margin-top:20px;
       justify-content: space-between;
       
     }
+
+    .orderSummary{
+      display: flex;
+      
+      line-height: 2.5;
+    }

@@ -16,8 +16,11 @@ export class CartComponent implements OnInit {
   cart: Cart = new Cart();
   msg: boolean = false;
   msg1: boolean = false;
-
   pItems: any = [];
+  totalPrice:any = 0;
+  priceTax:any = 0;
+
+
   constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
@@ -26,7 +29,29 @@ export class CartComponent implements OnInit {
       this.pItems = JSON.parse(strItems);
     }
 
+    this.totalP();
+    this.priceTax = this.totalPrice*7.5/100+this.totalPrice
+
+    
+    
+
   }
+
+
+  totalP() {
+    let total = 0;
+    for(let p of this.pItems){
+      total += p.price;
+    }
+    return this.totalPrice = total;
+    
+  }
+
+
+
+
+
+
 
   saveOrder() {
 
@@ -58,9 +83,6 @@ export class CartComponent implements OnInit {
   }
 
   clearCart(pItems: any) {
-
-
-
     this.pItems.splice(pItems)
     this.storage.setItem("fav_items", JSON.stringify(this.pItems));
 
