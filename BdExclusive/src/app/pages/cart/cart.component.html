@@ -54,8 +54,8 @@
     <form (ngSubmit)="saveOrder()">
         <div class="checkout mt-5 mb-5">
             <div class="col-md-7" style="background-color: rgba(245, 245, 245, 0.999);">
-                <h4 class="text-center" style="color: aliceblue; background-color: rgb(23, 146, 23);">Billing
-                    Information
+                <h4 class="text-center" style="color: aliceblue; background-color: rgb(23, 146, 23);">
+                    Shipping Address
                 </h4>
 
                 <div class="row" *ngIf="msg">
@@ -134,11 +134,11 @@
 
                     <div class="container text-end">
                         <span style="display: block; font-size: 18px;">{{pItems.length}}</span>
-                        <span style="display: block; font-size: 18px;">BDT {{totalPrice}} TK</span>
+                        <span style="display: block; font-size: 18px;">BDT {{ this.cart.totalAmount}} TK</span>
                         <span style="display: block; font-size: 18px;">7.5%</span>
                         <span style="display: block; font-size: 18px;">Available</span>
                         <hr>
-                        <span style="display: block; font-size: 18px;">BDT {{priceTax}} TK</span> 
+                        <span style="display: block; font-size: 18px;">BDT {{this.cart.priceTax}} TK</span> 
                         
 
                     </div>

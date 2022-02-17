@@ -17,8 +17,7 @@ export class CartComponent implements OnInit {
   msg: boolean = false;
   msg1: boolean = false;
   pItems: any = [];
-  totalPrice:any = 0;
-  priceTax:any = 0;
+
 
 
   constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router) { }
@@ -30,7 +29,7 @@ export class CartComponent implements OnInit {
     }
 
     this.totalP();
-    this.priceTax = this.totalPrice*7.5/100+this.totalPrice
+    this.cart.priceTax = this.cart.totalAmount *7.5/100 + this.cart.totalAmount
 
     
     
@@ -43,7 +42,7 @@ export class CartComponent implements OnInit {
     for(let p of this.pItems){
       total += p.price;
     }
-    return this.totalPrice = total;
+    return this.cart.totalAmount = total;
     
   }
 
@@ -54,10 +53,10 @@ export class CartComponent implements OnInit {
 
 
   saveOrder() {
-    console.log("total Price = "+this.cart.totalAmount);
+    console.log(this.cart);
     
 
-    if (this.cart.name !== "" && this.cart.contact !== "" && this.cart.email !== "", this.cart.address !== "") {
+    if (this.cart.name !== "" && this.cart.contact !== "" && this.cart.email !== "" && this.cart.address !== "") {
       this.msg = true;
 
       const header = { 'content-Type': 'application/json' }

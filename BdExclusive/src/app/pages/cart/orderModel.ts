@@ -5,6 +5,6 @@ export class Cart{
     email : String = "";
     address : String = "";
     totalAmount: number = 0;
-
+    priceTax: number = 0;
 
 }
