@@ -11,6 +11,8 @@
                     <th scope="col">Email</th>
                     <th scope="col">Address</th>
                     <th scope="col">Total Amount</th>
+                    <th scope="col">Action</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +24,9 @@
                     <td>{{p.email}}</td>
                     <td>{{p.address}}</td>
                     <td>{{p.priceTax}} .TK</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteOrder(p.id)">Delete</button>
+                    </td>
     
                 </tr>
             </tbody>

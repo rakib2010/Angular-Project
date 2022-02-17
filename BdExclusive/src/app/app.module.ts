@@ -22,6 +22,9 @@ import { OrderListComponent } from './backend/order-list/order-list.component';
 import { ProductService } from './service/product.service';
 import { LocalStorageService } from './service/local-storage.service';
 import { OrderDetailsService } from './service/order-details.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 
@@ -52,7 +55,15 @@ import { OrderDetailsService } from './service/order-details.service';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    
+    
+    
+    
+    
+    
+   
   ],
   providers: [
     ProductService,

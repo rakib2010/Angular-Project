@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/service/product.service';
+
 
 @Component({
   selector: 'app-order-list',
@@ -9,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class OrderListComponent implements OnInit {
   ol: any;
 
-  constructor(private ps: ProductService) { }
+  constructor(private ps: ProductService, private http:HttpClient) { }
 
   ngOnInit(): void {
 
@@ -22,5 +24,20 @@ export class OrderListComponent implements OnInit {
 
     })
   }
+
+  deleteOrder(id: any){
+    const header = { 'content-Type': 'application/json' }
+    this.http.get("http://localhost:8080/deleteOrder/" + id,{ headers: header })
+      .subscribe(data => {
+    
+      })
+
+      
+ 
+  }
+
+  
+
+  
 
 }

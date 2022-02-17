@@ -1,8 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LocalStorageService } from 'src/app/service/local-storage.service';
 import { Cart } from './orderModel';
+
+
+
 
 
 
@@ -20,7 +24,7 @@ export class CartComponent implements OnInit {
 
 
 
-  constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router) { }
+  constructor(private storage: LocalStorageService, private http: HttpClient, private router: Router, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     let strItems = this.storage.getItem('fav_items');
@@ -94,6 +98,20 @@ export class CartComponent implements OnInit {
     this.router.navigate(['/products'])
 
   }
+
+  openVerticallyCentered(content: any) {
+    if(this.cart.name !== "" && this.cart.contact !== "" && this.cart.email !== "" && this.cart.address !== ""){
+      this.modalService.open(content, { centered: true });
+
+    }
+    
+  }
+
+
+  
+
+
+
 
 
 

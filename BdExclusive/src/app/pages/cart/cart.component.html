@@ -105,12 +105,30 @@
 
 
                     <div class="d-grid gap-3 col-6 mx-auto mt-4">
-                        <button class="btn btn-success" type="submit">Order Now</button>
+                        <button class="btn btn-success" type="submit" (click)="openVerticallyCentered(content)" >Confirm Order</button>
+                        <ng-template #content let-modal>
+                            <div class="modal-header">
+                              <h4 class="modal-title">Congratulations!</h4>
+                              <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Your Order is placed Successfully</p>
+                              <p>You will receive your product just in time</p>
+                              <p>Thank you</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                            </div>
+                        </ng-template>
+                        
+               
+
 
                         <button class="btn btn-primary" (click)="shopMore()">Shop More</button>
 
 
                     </div>
+
                 </div>
 
 
@@ -138,8 +156,8 @@
                         <span style="display: block; font-size: 18px;">7.5%</span>
                         <span style="display: block; font-size: 18px;">Available</span>
                         <hr>
-                        <span style="display: block; font-size: 18px;">BDT {{this.cart.priceTax}} TK</span> 
-                        
+                        <span style="display: block; font-size: 18px;">BDT {{this.cart.priceTax}} TK</span>
+
 
                     </div>
                 </div>
